@@ -1,0 +1,93 @@
+.movies-container{
+    display: grid;
+    width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
+    margin-top: 20px;
+
+    .movies-card {
+        padding: 15px;
+        width: 320px;
+        height: auto;
+        box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        border-radius: 20px;
+        margin: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    
+        .img-place{
+            overflow: hidden;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+        }
+    
+        #card-img {
+            width: 100%;
+            height: 280px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.5s;
+          }
+    
+    
+          .card-text {
+            padding: 5%;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color:  #1a1a1a;
+            color: #ffffff;
+            font-size: 20px;
+          }
+    
+          .btn{
+            background-color:  #0d0d0d;
+            color: #ffffff;
+            padding: 10px;
+            border: 1px solid  #1a1a1a;
+            border-radius: 8px;
+            transition: 0.3s;
+          }
+    
+          .btn:hover{
+            background-color:  #bfbfbf;  
+      color: #0d0d0d;
+      border: 1px solid   #808080;
+      font-weight: 300px;
+          }
+      }
+}
+
+@media (max-width: 1460px) {
+    .movies-container{
+        width: 1100px;
+        grid-row-gap: 20px;
+    grid-column-gap: 25px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .movies-container{
+
+        width: 864px;
+       
+        display: grid;
+        grid-template-columns: repeat(2,1fr);;
+    }
+}
+
+@media (max-width: 860px) {
+    .movies-container{
+
+        width: 360px;
+        grid-row-gap: 5px;
+    grid-column-gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);;
+    }
+}

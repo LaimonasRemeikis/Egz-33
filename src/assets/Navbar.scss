@@ -1,0 +1,87 @@
+
+ 
+ 
+ 
+ *,*::after,*::before{
+     margin: 0;
+     box-sizing: border-box;
+
+ }
+ html{
+     font-size: 62.5%;
+ }
+ body{
+     font-size: 1.6rem;
+ }
+ li{
+     list-style: none;
+ }
+ a{
+     text-decoration: none;
+     color:white;
+
+ }
+ .nav{
+     position: sticky;
+     top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     height: 8vh;
+     background-color: $nav__back_color;
+
+     .nav__brand{
+         text-transform: uppercase;
+         font-weight: bold;
+
+     }
+     .nav__menu{
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+         gap: 9rem;
+         @media  (max-width: 768px) {
+            position: fixed;   
+            top: 5vh;
+            right: 0;
+            width: 50%;
+            height: 93vh;
+            background-color: $nav__back_color;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: 0.5s ease-in;
+           }
+
+        }
+        .nav__active{
+            transform: translateX(0);
+        }
+    }
+    .nav__toggler {
+        cursor: pointer;
+        display: none;
+        @media  (max-width: 768px) {
+         display: block;   
+        }
+        div{
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background: white;
+        transition: 0.3s ease-in;
+    }
+}
+//Nav active class
+// Toggler Icon Animation
+.toggle{
+    .line1{
+        transform: rotate(-45deg) translate(-4px,3px);
+    }
+    .line2{
+        opacity: 0;
+    }
+    .line3{
+        transform: rotate(45deg) translate(-5px,-5px);
+
+    }
+}

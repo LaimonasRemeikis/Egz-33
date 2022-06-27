@@ -1,0 +1,14 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: $color-primary;
+    height: 60px;
+
+    a{
+        color: $color-white;
+        text-decoration: none;
+        padding: 0 20px;
+    }
+}
